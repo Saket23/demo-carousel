@@ -6,13 +6,21 @@ const DownCarousel = ({
   position,
   handleLeftClick,
   handleRightClick,
-  images
+  images,
+  changeTopPositionFromClick
 }) => {
   return (
     <Container>
       <Wrapper position={position} width={449}>
         {images &&
-          images.map(i => <Image key={i} src={require(`${i}`)} alt="logo" />)}
+          images.map((i, index) => (
+            <Image
+              key={i}
+              src={require(`${i}`)}
+              alt="logo"
+              onClick={changeTopPositionFromClick(index)}
+            />
+          ))}
       </Wrapper>
       {position !== 0 && (
         <Arrow direction="left" handleClick={handleLeftClick} />

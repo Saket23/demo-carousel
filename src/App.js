@@ -75,6 +75,11 @@ class App extends PureComponent {
     this.setState({ downPosition: newDownPosition });
   }
 
+  //clicking on down carousel
+  changeTopPositionFromClick = newPosition => event => {
+    this.setState({ topPosition: newPosition });
+  };
+
   render() {
     const { topPosition, downPosition } = this.state;
     return (
@@ -91,6 +96,7 @@ class App extends PureComponent {
             handleLeftClick={this.downHandleLeftClick}
             handleRightClick={this.downHandleRightClick}
             images={images}
+            changeTopPositionFromClick={this.changeTopPositionFromClick}
           />
         </div>
       </div>

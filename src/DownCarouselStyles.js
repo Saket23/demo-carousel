@@ -21,4 +21,5 @@ export const Image = styled.img`
   width: 25%;
   height: 100px;
   padding-right: 5px;
+  cursor: pointer;
 `;

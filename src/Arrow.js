@@ -6,6 +6,7 @@ const Wrapper = styled.div`
   top: 50%;
   left: ${props => (props.direction === "left" ? "10px" : null)};
   right: ${props => (props.direction === "right" ? "10px" : null)};
+  cursor: pointer;
 `;
 
 const Image = styled.img`
