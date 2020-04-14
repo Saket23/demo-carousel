@@ -12,6 +12,7 @@ const Image = styled.img`
   border: 1px solid #dcdcdc;
   border-radius: 50%;
   background-color: #dcdcdc;
+  padding: 5px;
 `;
 
 const Arrow = ({ direction, handleClick }) => {
@@ -19,14 +20,14 @@ const Arrow = ({ direction, handleClick }) => {
     <Wrapper onClick={handleClick} direction={direction}>
       {direction === "left" ? (
         <Image
-          src={require("./images/left-arrow.svg")}
+          src={require("./images/back.svg")}
           alt="left"
           height="30px"
           width="30px"
         />
       ) : (
         <Image
-          src={require("./images/right-arrow.svg")}
+          src={require("./images/next.svg")}
           alt="right"
           height="30px"
           width="30px"
