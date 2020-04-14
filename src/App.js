@@ -33,13 +33,13 @@ class App extends PureComponent {
   //logic to change the down carousel if user clicked after 4 images
   handleRightLogic(newTopPosition) {
     if (newTopPosition % 4 === 0) {
-      this.downHandleRightClick();
+      this.setState({ downPosition: parseInt(newTopPosition / 4) });
     }
   }
 
   handleLeftLogic(newTopPosition) {
     if ((newTopPosition + 1) % 4 === 0 && newTopPosition !== 0) {
-      this.downHandleLeftClick();
+      this.setState({ downPosition: parseInt(newTopPosition / 4) });
     }
   }
 
